@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\Sajid_Java_Practise\a1\testng.xml</span>
+                    <span>C:\Users\Asus\git\repository\a1\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="script.ValidLogin" class="method navigator-link" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +116,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="a1.Demo1" class="method navigator-link" hash-for-method="testng">testng</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="script.ValidLogin" class="method navigator-link" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -117,17 +131,123 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">a1.Demo1</span>
+              <img src="skipped.png"/>
+              <span class="class-name">script.ValidLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testng">
-                  </a> <!-- testng -->
-                  <span class="method-name">testng</span>
+                  <a name="testValidLogin">
+                  </a> <!-- testValidLogin -->
+                  <span class="method-name">testValidLogin</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Unable to create new service: GeckoDriverService
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;DESKTOP-QRNIO1B&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: driver.version: unknown
+Command duration or timeout: 142 milliseconds
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at generic.BaseTest.openApp(BaseTest.java:37)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Unable to create new service: GeckoDriverService
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;DESKTOP-QRNIO1B&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-QRNIO1B&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.grid.session.remote.ServicedSession$Factory.lambda$get$0(ServicedSession.java:135)
+	at org.openqa.selenium.grid.session.remote.ServicedSession$Factory.apply(ServicedSession.java:152)
+	at org.openqa.selenium.remote.server.ActiveSessionFactory.lambda$apply$12(ActiveSessionFactory.java:180)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:541)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.server.ActiveSessionFactory.apply(ActiveSessionFactory.java:183)
+	at org.openqa.selenium.remote.server.NewSessionPipeline.lambda$null$2(NewSessionPipeline.java:66)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.util.Collections$2.tryAdvance(Collections.java:4820)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.server.NewSessionPipeline.lambda$createNewSession$3(NewSessionPipeline.java:69)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.util.stream.DistinctOps$1$2.accept(DistinctOps.java:174)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.util.stream.Streams$StreamBuilderImpl.tryAdvance(Streams.java:397)
+	at java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.server.NewSessionPipeline.createNewSession(NewSessionPipeline.java:72)
+	at org.openqa.selenium.remote.server.commandhandler.BeginSession.execute(BeginSession.java:65)
+	at org.openqa.selenium.remote.server.WebDriverServlet.lambda$handle$0(WebDriverServlet.java:235)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">script.ValidLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidLogin">
+                  </a> <!-- testValidLogin -->
+                  <span class="method-name">testValidLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,18 +255,35 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Sajid_Java_Practise\a1\testng.xml</span>
+            <span class="header-content">C:\Users\Asus\git\repository\a1\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;TestGC&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;hubUrl&quot; value=&quot;http://localhost:4444/wd/hub&quot;/&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;script&quot;/&gt;
+    &lt;/packages&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;a1.Demo1&quot;/&gt;
+      &lt;class name=&quot;script.LoginPage&quot;/&gt;
+      &lt;class name=&quot;script.ValidLogin&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- TestGC --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;TestFF&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;hubUrl&quot; value=&quot;http://localhost:4444/wd/hub&quot;/&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;script&quot;/&gt;
+    &lt;/packages&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;script.LoginPage&quot;/&gt;
+      &lt;class name=&quot;script.ValidLogin&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TestFF --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,7 +295,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">TestGC (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">TestFF (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,16 +324,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testng')
-data.setCell(0, 2, 'a1.Demo1')
-data.setCell(0, 3, 9);
+data.setCell(0, 1, 'testValidLogin')
+data.setCell(0, 2, 'script.ValidLogin')
+data.setCell(0, 3, 239);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testValidLogin')
+data.setCell(1, 2, 'script.ValidLogin')
+data.setCell(1, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 ms</span>
+              <span class="suite-total-time">Total running time: 239 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -219,11 +363,29 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">a1.Demo1</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">script.ValidLogin</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testng</span>
+                <span class="method-name">testValidLogin</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">openApp(http://localhost:4444/wd/hub, chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">openApp(http://localhost:4444/wd/hub, firefox)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testValidLogin</span>
+                <span class="method-start">6786 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">7026 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
